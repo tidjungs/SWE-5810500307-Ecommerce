@@ -32,7 +32,7 @@ class userStripe(models.Model):
 def stripeCallback(sender, request, user, **kwargs):
     user_stripe_account, created = userStripe.objects.get_or_create(user=user)
     if created:
-        print 'created for %s'%(user.username)
+        print('created for %s'%(user.username))
     if user_stripe_account.stripe_id is None or user_stripe_account.stripe_id == '':
         new_stripe_id = stripe.Customer.create(email=user.email)
         user_stripe_account.stripe_id = new_stripe_id['id']

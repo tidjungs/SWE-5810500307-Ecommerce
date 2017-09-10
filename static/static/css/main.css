@@ -20,6 +20,10 @@
     border-radius: 4px;
 }
 
+.navbar-nav > li > a {
+    color: black;
+}
+
 .navbar-inverse {
     background-color: #791212;
     border-color: #ffffff;
